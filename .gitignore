@@ -1,0 +1,15 @@
+*/packer_cache/*
+
+.terraform/*
+.terraform.*
+terraform.*
+
+*.zip
+*.qcow2
+*.ova
+*.nvram
+*.vmx*
+*.vmsd
+*.vmdk
+
+variables.sh
