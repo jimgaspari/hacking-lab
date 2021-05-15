@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 set +x
 
-QCOW=Metaspoitable2.qcow2
+QCOW=Metasploitable2.qcow2
 SITE=https://download.vulnhub.com/metasploitable/metasploitable-linux-2.0.0.zip
 
 TYPE=zip

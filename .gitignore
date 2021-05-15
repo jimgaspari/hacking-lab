@@ -11,5 +11,7 @@ terraform.*
 *.vmx*
 *.vmsd
 *.vmdk
+*.ovf
 
 variables.sh
+*/Metasploitable/readme.txt

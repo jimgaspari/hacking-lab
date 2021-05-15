@@ -1,18 +1,18 @@
 resource "libvirt_volume" "msf2-disk" {
   name = "msf2.qcow2"
   pool = "BahamutDisks"
-  base_volume_id = "msf2/Metaspoitable2.qcow2"
+  source = "msf2/Metasploitable2.qcow2"
 }
 
 resource "libvirt_domain" "domain-msf2" {
   provider = libvirt
   name = "Metaspoitable2"
-  memory = 512
-  vcpu = 1
+  memory = 1024
+  vcpu = 2
   
   network_interface {
     network_name = "hacking"
-    wait_for_lease = true
+    # wait_for_lease = true
   }
 
   disk {

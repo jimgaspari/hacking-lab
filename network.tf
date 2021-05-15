@@ -2,7 +2,7 @@ resource "libvirt_network" "hacking" {
   name = "hacking"
   mode = "none"
   domain = ""
-
+  autostart = true
   #  list of subnets the addresses allowed for domains connected
   # also derived to define the host addresses
   # also derived to define the addresses served by the DHCP server
