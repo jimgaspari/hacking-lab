@@ -1,7 +1,7 @@
 resource "libvirt_volume" "msf2-disk" {
   name = "msf2.qcow2"
   pool = "BahamutDisks"
-  source = "msf2/Metasploitable2.qcow2"
+  source = "../msf2/Metasploitable2.qcow2"
 }
 
 resource "libvirt_domain" "domain-msf2" {
@@ -17,7 +17,6 @@ resource "libvirt_domain" "domain-msf2" {
 
   disk {
     volume_id = libvirt_volume.msf2-disk.id
-    scsi = "true"
   }
 
   console {

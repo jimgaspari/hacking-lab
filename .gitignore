@@ -1,6 +1,6 @@
 */packer_cache/*
 
-.terraform/*
+*/.terraform/*
 .terraform.*
 terraform.*
 
@@ -15,3 +15,5 @@ terraform.*
 
 variables.sh
 */Metasploitable/readme.txt
+cloud_init.yml
+kali_network_config.yml

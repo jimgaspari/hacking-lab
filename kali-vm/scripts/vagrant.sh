@@ -15,5 +15,3 @@ chmod 0440 /etc/sudoers.d/vagrant
 # SSH tweak
 echo 'UseDNS no' >> /etc/ssh/sshd_config
 
-# Fix the DHCP NAT
-echo -e "auto eth0\niface eth0 inet dhcp" >> /etc/network/interfaces

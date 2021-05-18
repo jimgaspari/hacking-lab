@@ -1,7 +1,7 @@
 resource "libvirt_volume" "goldeneye-disk" {
   name = "goldeneye.qcow2"
   pool = "BahamutDisks"
-  source = "geye/GoldenEye-v1.qcow2"
+  source = "../geye/GoldenEye-v1.qcow2"
 }
 
 resource "libvirt_domain" "domain-goldeneye" {
