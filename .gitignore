@@ -6,6 +6,7 @@ terraform.*
 
 *.zip
 *.qcow2
+*.raw
 *.ova
 *.nvram
 *.vmx*
@@ -15,5 +16,5 @@ terraform.*
 
 variables.sh
 */Metasploitable/readme.txt
-cloud_init.yml
-kali_network_config.yml
+cloud_init.cfg
+kali_network_config.cfg
