@@ -3,13 +3,13 @@ ssh_pwauth: true
 disable_root: false
 chpasswd:
   list: |
-     vagrant:somethingelse
+    user:somethingelse
   expire: false
 users:
-  - name: vagrant
+  - name: user
     sudo: ALL=(ALL) NOPASSWD:ALL
     groups: users, admin
-    home: /home/vagrant
+    home: /home/user
     shell: /bin/bash
     lock_passwd: false
     ssh-authorized-keys:
