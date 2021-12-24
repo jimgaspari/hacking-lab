@@ -1,8 +1,9 @@
 #!/usr/bin/bash
 set +x
 
-QCOW=Metaspoitable1.qcow2
-SITE=https://download.vulnhub.com/metasploitable/Metasploitable.zip
+QCOW=Metasploitable2.qcow2
+SITE=https://download.vulnhub.com/metasploitable/metasploitable-linux-2.0.0.zip
+
 TYPE=zip
 
 if [ ! -f ${SITE##*/} ]; then

@@ -19,10 +19,14 @@ This hacking lab is complete the following tasks:
 1. Deploy Lab with Terraform
 
 ## KVM Kali Template
-Since there is not currently a Kali image for kvm, I have automated the build like the kali team does for the Vagrant Images. In the packer build, I am using [qemu](https://www.qemu.org/) to build a [kvm](https://www.linux-kvm.org/page/Main_Page) image.
+Since there is not currently a Kali image for kvm, I have automated the build like the kali team does for the Kali Cloud Images. I am using [qemu](https://www.qemu.org/) to build a [kvm](https://www.linux-kvm.org/page/Main_Page) image. 
 
-The process is simple enough to complete.
+Kali Linux has a could build script that they have forked to create cloud images.  [Gitlab kali-cloud repo](https://gitlab.com/kalilinux/build-scripts/kali-cloud)
+
+The process is simple enough to complete, but there are several steps that need to be done first
 ```bash
-cd kali-vm
-packer build config.json
+git clone https://gitlab.com/kalilinux/build-scripts/kali-cloud.git
+cd kali-cloud
+make image_kali-rolling_genericcloud_amd64
 ```
+## Metasploitable 1

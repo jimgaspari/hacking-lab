@@ -1,10 +1,9 @@
 #!/usr/bin/bash
 set +x
 
-QCOW=GoldenEye-v1.qcow2
-SITE=https://download.vulnhub.com/goldeneye/GoldenEye-v1.ova
-TYPE=ova
-
+QCOW=Metasploitable1.qcow2
+SITE=https://download.vulnhub.com/metasploitable/Metasploitable.zip
+TYPE=zip
 
 if [ ! -f ${SITE##*/} ]; then
     curl -lO $SITE
@@ -14,7 +13,7 @@ fi
 
 if [ ! -f "$QCOW" ]; then
     echo "Extracting file"
-    tar -xf $(find . -type f -name *.$TYPE)
+    unzip -n $(find . -type f -name *.$TYPE)
     echo "Converting to qcow2"
     qemu-img convert -f vmdk -O qcow2 $(find . -type f -name *.vmdk) $QCOW
     echo "The disk $QCOW has been converted"
